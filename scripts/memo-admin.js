@@ -20,10 +20,18 @@ function getPdfUrl() {
 			data.push(id);
 		}
 	});
+
+	//Add respondent filter
+	var respondents = $("#filter_box").val().split('\n');
+
 	var url=pdfUrl;
 	if (data.length > 0) {
 		url+= '?m[]='+(data.join('&m[]='));
 	}
+
+	if( respondents[0].length )
+		url+= '&m[]=r_'+(respondents.join('&m[]=r_'));
+
 	return url;
 }
 
@@ -35,16 +43,16 @@ $('#memo-wrapper').delegate('input', 'click', function() {
 	} else {
 		$('.memo_'+id).stop().fadeOut();
 	}
+
 	$('#DownloadPdfLink').attr('href', getPdfUrl());
 });
 
 $("#filter_box").keyup(function(){
+
 	var input = $(this).val().split('\n');
-
-	console.log(input);
-
 	$(".memo-dot").hide();
 
+	var a = 0;
 	$.each(input,function(e, value){
 
 		if( value === undefined )
@@ -55,8 +63,13 @@ $("#filter_box").keyup(function(){
 
 		$('.respondent_' + value).show();
 
-
+		a++;
 	});
+
+	if( a === 0 )
+		$(".memo-dot").show();
+
+	$('#DownloadPdfLink').attr('href', getPdfUrl());
 
 });
 

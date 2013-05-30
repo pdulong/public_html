@@ -4577,3 +4577,243 @@ Stack trace:
 #18 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #19 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CApplication->run()
 #20 {main} REQUEST_URI=/labels/0110/public_html/brief/details/92/niet-klikkers-onderwijs/pagina/1
+2013/05/30 11:39:13 [error] [php] Undefined index: m (/Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:118)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203?r[]=1
+2013/05/30 11:40:49 [error] [php] Undefined index: m (/Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:118)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203?r[]=1
+2013/05/30 11:40:54 [error] [php] Undefined index: m (/Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:118)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203?r[]=1
+2013/05/30 11:41:48 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:43:00 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:43:01 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:43:26 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:43:28 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:43:50 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:44:21 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:44:22 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1
+2013/05/30 11:44:38 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1&r[]=2
+2013/05/30 11:44:57 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1&r[]=2
+2013/05/30 11:44:59 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1&r[]=2
+2013/05/30 11:48:56 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[0]=1&r[1]=2
+2013/05/30 11:49:09 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[0]=196&r[0]=1&r[1]=2
+2013/05/30 11:51:20 [error] [php] Undefined index: m (/Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:121)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:51:54 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:123) (/Applications/MAMP/htdocs/labels/0110/public_html/yii/extensions/fpdf/FPDF.php:1032)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/actions/CInlineAction.php(50): LetterController->actionDownloadPdf()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:53:23 [error] [php] Undefined index: m (/Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:126)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:53:35 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:124) (/Applications/MAMP/htdocs/labels/0110/public_html/yii/extensions/fpdf/FPDF.php:1032)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/actions/CInlineAction.php(50): LetterController->actionDownloadPdf()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:53:42 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:124) (/Applications/MAMP/htdocs/labels/0110/public_html/yii/extensions/fpdf/FPDF.php:1032)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/actions/CInlineAction.php(50): LetterController->actionDownloadPdf()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:54:29 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:124) (/Applications/MAMP/htdocs/labels/0110/public_html/yii/extensions/fpdf/FPDF.php:1032)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/actions/CInlineAction.php(50): LetterController->actionDownloadPdf()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:54:38 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/labels/0110/public_html/yii/controllers/LetterController.php:124) (/Applications/MAMP/htdocs/labels/0110/public_html/yii/extensions/fpdf/FPDF.php:1032)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/actions/CInlineAction.php(50): LetterController->actionDownloadPdf()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(134): LetterController->runAction()
+#3 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(1144): CAccessControlFilter->filter()
+#5 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CInlineFilter.php(59): LetterController->filterAccessControl()
+#6 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(283): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CController.php(257): LetterController->runActionWithFilters()
+#9 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(277): LetterController->run()
+#10 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#11 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&m[]=r_1
+2013/05/30 11:58:03 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1&r[]=2
+2013/05/30 11:58:48 [error] [php] trim() expects parameter 1 to be string, array given (/Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:309)
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CWebApplication->run()
+REQUEST_URI=/labels/0110/public_html/brief/pdf/92/niet-klikkers-onderwijs/pagina/1?m[]=196&m[]=197&m[]=198&m[]=199&m[]=200&m[]=201&m[]=202&m[]=203&r[]=1&r[]=2

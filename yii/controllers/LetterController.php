@@ -77,8 +77,6 @@ class LetterController extends Controller
 		}
 		$usedMemos=array_keys($usedMemos);
 
-		//echo '<pre>'; print_r($page->memos); echo '</pre>';
-
 		$this->render('view',array(
 			'model'=>$page,
 			'letter'=>$model,
@@ -91,6 +89,7 @@ class LetterController extends Controller
 	 */
 	public function actionDownloadPdf()
 	{
+
 		if (!isset($_GET['page']) || !ctype_digit($_GET['page']))
 			throw new CHttpException(404, 'De opgevraagde pagina is niet gevonden');
 
@@ -106,19 +105,27 @@ class LetterController extends Controller
 			'params'=>array(':position'=>$_GET['page']),
 		));
 
-		$condition='';
-		$params=array();
+		$condition	 = '';
+		$params		 = array();
+		$respondents = array();
+
 		if (isset($_GET['m']))
 		{
 			foreach($_GET['m'] as $i=>$id)
 			{
+				if( substr( $id , 0, 2) == 'r_' )
+					$respondents[] = substr($id, 2);
+
 				if (!ctype_digit($id))
-					unset($_GET['m']);
+					unset($_GET['m'][$i]);
+
 			}
+
 			if (count($_GET['m']) > 0)
-			{
 				$criteria->addInCondition('memos.memoId', $_GET['m']);
-			}
+
+			if( count($respondents) )
+				$criteria->addInCondition('memos.respondent', $respondents);
 		}
 
 		$model=Letter::model()->findByPk($_GET['id'], $criteria);

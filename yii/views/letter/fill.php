@@ -15,7 +15,7 @@ Yii::app()->clientScript
 <div id="<?php echo $model->isLandscape? 'topbar' : 'sidebar'; ?>">
 	<div id="memos">
 		<?php foreach($model->availableMemosRaw as $memo): ?>
-		<?php $disabled=''; foreach($memos as $m) if ($m->memoId==$memo->memoId) $disabled=' memo-disabled'; ?>
+		<?php $disabled=''; foreach($memos as $m) if ($m->memoId==$memo->memoId) ?>
 		<div class="memo<?php echo $disabled; ?>" id="memo_<?php echo $memo->memoId; ?>">
 			<div class="punaise"></div>
 			<div class="memo-inner">

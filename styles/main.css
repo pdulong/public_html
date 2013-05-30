@@ -356,3 +356,10 @@ a img { border: 0; outline: none; }
 	clear: both;
 	height: 20px;
 }
+
+#filter_box{
+	border: 2px solid #888;
+	padding: 5px;
+	font: 0.75em/1.2 Verdana, Tahoma, Arial, sans-serif;
+	width: 356px;
+}

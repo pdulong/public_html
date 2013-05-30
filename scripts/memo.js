@@ -23,7 +23,7 @@ function saveMemo(memo) {
 		left: Math.round(memo.offset().left - init_pos.left - 4),
 		comment: ta.size() ? ta.val() : ''
 	};
-	$.post('/pageMemo/create', data, function(response) {
+	$.post('https://localhostssl:8890/labels/0110/public_html/pageMemo/create', data, function(response) {
 		if (response.result==1) {
 			if (ta.size()) {
 				$('.comment-text', memo).html(ta.val().replace(/(\r\n|\n\r|\n)/g, '<br />')).show();
@@ -47,7 +47,7 @@ $('.memo').draggable({
 	revert: 'invalid',
 	helper: 'clone'
 });
-$('.memo-disabled').draggable('disable');
+//$('.memo-disabled').draggable('disable');
 
 /******************
  DEFINE DROPPABLES
@@ -64,7 +64,7 @@ $('.letter-region').droppable({
 		var target=$(event.target);
 		target.fadeOut(500, function() { $(this).removeClass('drop-hover').css('opacity', 0.4).show()});
 		var memo=ui.draggable.clone();
-		ui.draggable.not('.comment').fadeTo(500, 0.2).draggable('disable');
+//		ui.draggable.not('.comment').fadeTo(500, 0.2);
 		var id=memo.attr('id');
 		id=id.substr(id.lastIndexOf('_') + 1);
 		memo.data('memoId', id).attr('id','').css({
