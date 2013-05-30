@@ -86,14 +86,14 @@ return array(
 			'combineJs'=>!defined('LDEV') || !LDEV,
 			'combineCss'=>!defined('LDEV') || !LDEV,
 			'scriptMap'=>array(
-				'jquery.js'=>'http://localhost:8080/labels/0110/public_html/scripts/jquery/jquery.core.js',
-				'jquery.min.js'=>'http://localhost:8080/labels/0110/public_html/scripts/jquery/jquery.core.js',
+				'jquery.js'=>'https://localhostssl:8890/labels/0110/public_html/scripts/jquery/jquery.core.js',
+				'jquery.min.js'=>'https://localhostssl:8890/labels/0110/public_html/scripts/jquery/jquery.core.js',
 			)
 		),
 		'widgetFactory'=>array(
 			'widgets'=>array(
 				'CGridView'=>array(
-					'cssFile'=>'/styles/gridview/styles.css',
+					'cssFile'=>'https://localhostssl:8890/labels/0110/public_html/styles/gridview/styles.css',
 					'selectableRows'=>0,
 				),
 			),

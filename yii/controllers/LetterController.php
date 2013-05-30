@@ -59,7 +59,7 @@ class LetterController extends Controller
 
 		if ($model===null)
 			throw new CHttpException(404, 'Pagina niet gevonden');
-		
+
 		if (!$model->isViewable(Yii::app()->user->id))
 			throw new CHttpException(403, 'U heeft onvoldoende rechten deze pagina te bekijken.');
 
@@ -76,6 +76,8 @@ class LetterController extends Controller
 			$usedMemos[$m->memo->id]=true;
 		}
 		$usedMemos=array_keys($usedMemos);
+
+		//echo '<pre>'; print_r($page->memos); echo '</pre>';
 
 		$this->render('view',array(
 			'model'=>$page,
@@ -120,13 +122,13 @@ class LetterController extends Controller
 		}
 
 		$model=Letter::model()->findByPk($_GET['id'], $criteria);
-		
+
 		if (!$model->isViewable(Yii::app()->user->id))
 			throw new CHttpException(403, 'U heeft onvoldoende rechten deze pagina te bekijken.');
 
 		if ($model===null)
 			throw new CHttpException(404, 'Pagina niet gevonden');
-		
+
 		$pdf=$model->generatePdf();
 		$pdf->Output(Fn::friendlyFilename(date('Ymd').'-rapport '.$model->description.'-pagina-'.$_GET['page'].'.pdf'), 'D');
 	}
@@ -206,7 +208,7 @@ class LetterController extends Controller
 		{
 			$model->attributes=$_POST['Letter'];
 			$model->editorUsers=$_POST['Letter']['editorUsers'];
-			
+
 			if($model->save())
 			{
 				if (isset($model->editorUsers) && is_array($model->editorUsers))
@@ -241,13 +243,13 @@ class LetterController extends Controller
 		{
 			$model->attributes=$_POST['Letter'];
 			$model->editorUsers=$_POST['Letter']['editorUsers'];
-			
+
 			if($model->save())
 			{
 				$permissions=UserLetterPermission::model()->findAll('letterId=:letterId', array(':letterId'=>$model->id));
 				foreach($permissions as $permission)
 					$permission->delete();
-					
+
 				if (isset($model->editorUsers) && is_array($model->editorUsers))
 				{
 					foreach($_POST['Letter']['editorUsers'] as $userId)
@@ -261,7 +263,7 @@ class LetterController extends Controller
 				$this->redirect(array('/letter/admin'));
 			}
 		}
-		
+
 		foreach($model->viewerUsers as $user)
 		{
 			$model->editorUsers[]=$user->id;

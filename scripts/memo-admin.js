@@ -38,4 +38,26 @@ $('#memo-wrapper').delegate('input', 'click', function() {
 	$('#DownloadPdfLink').attr('href', getPdfUrl());
 });
 
+$("#filter_box").keyup(function(){
+	var input = $(this).val().split('\n');
+
+	console.log(input);
+
+	$(".memo-dot").hide();
+
+	$.each(input,function(e, value){
+
+		if( value === undefined )
+			return true;
+
+		if( value.length === 0 )
+			return true;
+
+		$('.respondent_' + value).show();
+
+
+	});
+
+});
+
 });

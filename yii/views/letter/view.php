@@ -32,8 +32,15 @@ Yii::app()->clientScript
 					<?php endif; ?>
 				<?php endforeach; ?>
 			</div>
+
+			<h2>Filter op respondenten:</h2>
+			<p><textarea name="filter" id="filter_box"></textarea></p>
+			<small>Scheid respondenten d.m.v. een enter</small>
+
 			<h2>Acties</h2>
 			<p><?php echo CHtml::link('&#187; Download PDF', array('/letter/downloadPdf', 'id'=>$letter->id, 'description'=>Fn::fUrl($letter->description),'page'=>$_GET['page']), array('id'=>'DownloadPdfLink')); ?></p>
+
+
 		<?php endif; ?>
 	</div>
 	<div class="url">
@@ -49,8 +56,8 @@ Yii::app()->clientScript
 
 <div id="letter" class="letter-semitrans">
 	<img src="<?php echo CHtml::asset(Yii::app()->runtimePath.'/pages/'.$model->id.'/'.$model->filename); ?>" alt="" />
-	<?php foreach($model->memos as $m): ?>
-	<div class="memo-dot memo_<?php echo $m->memo->id; ?>" style="top: <?php echo $m->top+10; ?>px; left: <?php echo $m->left+65; ?>px; background-color: <?php echo $m->memo->color; ?>">
+	<?php foreach($model->memos as $m):?>
+	<div class="memo-dot memo_<?php echo $m->memo->id; ?> respondent_<?= $m->respondent; ?>" respondent="<?= $m->respondent; ?>" style="top: <?php echo $m->top+10; ?>px; left: <?php echo $m->left+65; ?>px; background-color: <?php echo $m->memo->color; ?>">
 		<div class="admin-comment">
 			<?php echo CHtml::encode($m->respondent); ?>: <?php echo $m->memo->description; ?>
 			<div class="comment-text" style="display: block;">
