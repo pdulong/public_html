@@ -1,0 +1,102 @@
+<?php
+return array(
+	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+	'name'=>'RMI Fullservice Marktonderzoek',
+	'homeUrl'=>'/',
+	'timeZone'=>'Europe/Amsterdam',
+	'language'=>'nl',
+	'preload'=>array(
+		'log',
+	),
+	'modules'=>array(
+	),
+	'import'=>array(
+		'application.models.*',
+		'application.models.forms.*',
+		'ext.components.*',
+		'ext.GDImage',
+		'ext.Email',
+		'application.modules.ImageChooser.components.*',
+	),
+	'params'=>array(
+		'email'=>array(
+			'default::from'=>array('info@myproject.com','My Project'),
+			'default::to'=>array(
+				array('info@myproject.com','My Project'),
+			),
+		),
+	),
+	'components'=>array(
+		'db'=>array(
+			'connectionString'=>'mysql:host=localhost;dbname=labels',
+			'emulatePrepare'=>true,
+			'username'=>'root',
+			'password'=>'usbw',
+			'charset'=>'utf8',
+			'enableParamLogging'=>false,
+			'enableProfiling'=>false,
+			'schemaCachingDuration'=>1800
+		),
+		'log'=>array(
+			'class'=>'CLogRouter',
+			'routes'=>array(
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'error warning',
+					'logFile'=>'error.log',
+				),
+				array(
+					'class'=>'ext.logroutes.No404EmailLogRoute',
+					'emails'=>'beheer@nxtmix.nl',
+					'levels'=>'warning error',
+					//'sentFrom'=>'yii@'.(isset($_SERVER) && isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:'unknownhost.nl'),
+					'sentFrom'=>'beheer@nxtmix.nl',
+				),
+				array(
+					'class'=>'CDbLogRoute',
+					'autoCreateLogTable'=>false,
+					'connectionID'=>'db',
+					'logTableName'=>'YiiApplicationLog',
+					'categories'=>'application.*'
+				),
+			),
+		),
+		'urlManager'=>array(
+			'class'=>'ext.appcomponents.EUrlManager',
+			'urlFormat'=>'path',
+			'showScriptName'=>false,
+			'rules'=>require(dirname(__FILE__).'/urlrules.php'),
+		),
+		'authManager'=>array(
+			'class'=>'ext.appcomponents.EDbAuthManager',
+			'connectionID'=>'db',
+		),
+		'coreMessages'=>array(
+			'basePath'=>dirname(__FILE__).'/../messages',
+		),
+		'user'=>array(
+			'allowAutoLogin'=>true,
+			'guestName'=>'bezoeker',
+		),
+		'errorHandler'=>array(
+			'errorAction'=>'site/error',
+		),
+		'clientScript'=>array(
+			'class'=>'ext.appcomponents.EClientScript',
+			'combineJs'=>!defined('LDEV') || !LDEV,
+			'combineCss'=>!defined('LDEV') || !LDEV,
+			'scriptMap'=>array(
+				'jquery.js'=>'/scripts/jquery/jquery.core.js',
+				'jquery.min.js'=>'/scripts/jquery/jquery.core.js',
+			)
+		),
+		'widgetFactory'=>array(
+			'widgets'=>array(
+				'CGridView'=>array(
+					'cssFile'=>'/styles/gridview/styles.css',
+					'selectableRows'=>0,
+				),
+			),
+		),
+	),
+);

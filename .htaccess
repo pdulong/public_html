@@ -1,0 +1,9 @@
+SetEnvIf REQUEST_URI htc$ no-gzip dont-vary
+AddType text/x-component htc
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+

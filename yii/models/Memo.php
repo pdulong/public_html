@@ -1,0 +1,168 @@
+<?php
+class Memo extends CActiveRecord
+{
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @return Memo the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'Memo';
+	}
+
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		return array(
+			array('color', 'required'),
+			array('color', 'length', 'is'=>7),
+			array('description', 'length', 'max'=>255),
+			array('description', 'required'),
+			array('description,color','safe','on'=>array('search')),
+		);
+	}
+
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		return array(
+			'uses'=>array(self::HAS_MANY, 'PageMemo', 'memoId'),
+			'numUses'=>array(self::STAT, 'PageMemo', 'memoId'),
+
+		);
+	}
+
+	/**
+	 * Render the memo with the text
+	 */
+	public function renderImage()
+	{
+		$size=12; $angle=0; $y=50;
+		if (strstr($this->description, "\n") || strstr($this->description, "\r"))
+			$description=str_replace(array("\r\n","\n\r","\n"), '|', $this->description);
+		else
+			$description=$this->description;
+		
+		$img=imagecreatefromgif(Yii::getPathOfAlias('application.data').'/memo.gif');
+		$font=Yii::getPathOfAlias('application.data').'/arial.ttf';
+		$blue=imagecolorallocate($img, 72, 100, 127);
+		$lines=explode('|', $description);
+		foreach($lines as $line)
+		{
+			$dim=imagettfbbox($size, $angle, $font, $line);
+			$width=$dim[4]-$dim[0];
+			$x=76-($width/2);
+			imagettftext($img, $size, $angle, $x, $y, $blue, $font, $line);
+			$y+=1.2*$size;
+		}
+		return $img;
+	}
+
+	/**
+	 * Get the URL of the image for this memo
+	 */
+	public function getImageUrl()
+	{
+		$file=Yii::app()->runtimePath.'/memos/'.$this->id.'/'.Fn::friendlyFilename($this->description.'.gif');
+		if (file_exists(Yii::app()->assetManager->getPublishedPath($file)))
+		{
+			return Yii::app()->assetManager->getPublishedUrl($file);
+		}
+		else
+		{
+			@mkdir(Yii::app()->runtimePath.'/memos/'.$this->id);
+			$img=$this->renderImage();
+			imagegif($img, $file);
+			return CHtml::asset($file);
+		}
+	}
+
+	/**
+	 * List data
+	 */
+	public static function listData()
+	{
+		return CHtml::listData(self::model()->findAll(array('order'=>'description ASC')), 'id', 'description');
+	}
+
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'id'=>'ID',
+			'description'=>'Tekst',
+			'color'=>'Kleur',
+		);
+	}
+
+	/**
+	 * After delete: delete generated files
+	 */
+	protected function afterDelete()
+	{
+		foreach($this->uses as $use)
+			$use->delete();
+
+		PageAvailableMemo::model()->deleteAll('memoId=:memoId', array(':memoId'=>$this->id));
+
+		$file=Yii::app()->runtimePath.'/memos/'.$this->id.'/'.Fn::friendlyFilename($this->description.'.gif');
+		if (file_exists($asset=Yii::app()->assetManager->getPublishedPath($file)))
+		{
+			@unlink($asset);
+		}
+		if (file_exists(Yii::app()->runtimePath.'/memos/'.$this->id.'/') && is_dir(Yii::app()->runtimePath.'/memos/'.$this->id.'/'))
+			Fn::rmdir_recursive(Yii::app()->runtimePath.'/memos/'.$this->id.'/');
+
+		parent::afterDelete();
+	}
+	
+	/**
+	 * After save: delete any cached images in runtime/ and any assets
+	 */
+	protected function afterSave()
+	{
+		$file=Yii::app()->runtimePath.'/memos/'.$this->id.'/'.Fn::friendlyFilename($this->description.'.gif');
+		if (file_exists($asset=Yii::app()->assetManager->getPublishedPath($file)))
+		{
+			@unlink($asset);
+		}
+		if (file_exists(Yii::app()->runtimePath.'/memos/'.$this->id.'/') && is_dir(Yii::app()->runtimePath.'/memos/'.$this->id.'/'))
+			Fn::rmdir_recursive(Yii::app()->runtimePath.'/memos/'.$this->id.'/');
+		
+		parent::afterSave();
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('color',$this->color,true);
+		
+		return new CActiveDataProvider(get_class($this), array(
+			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>array(
+					'description'=>false,
+				)
+			)
+		));
+	}
+}

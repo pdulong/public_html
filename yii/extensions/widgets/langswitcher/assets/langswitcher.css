@@ -1,0 +1,18 @@
+#langswitcher a {
+	border: 0;
+	outline: none;
+}
+
+#langswitcher img {
+	margin-right: 4px;
+}
+
+#langswicther img.hl {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+#langswitcher img.faded {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
