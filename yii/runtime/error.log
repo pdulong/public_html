@@ -4536,3 +4536,21 @@ Stack trace:
 #19 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #20 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CApplication->run()
 #21 {main} REQUEST_URI=/labels/0110/public_html/
+2013/05/30 10:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "scripts/jquery.core.js".' in /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController('scripts/jquery....')
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CApplication->run()
+#3 {main} REQUEST_URI=/labels/0110/public_html/scripts/jquery.core.js
+2013/05/30 10:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "scripts/jquery.core.js".' in /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController('scripts/jquery....')
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CApplication->run()
+#3 {main} REQUEST_URI=/labels/0110/public_html/scripts/jquery.core.js
+2013/05/30 10:15:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "notitie".' in /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/web/CWebApplication.php(136): CWebApplication->runController('notitie')
+#1 /Applications/MAMP/htdocs/labels/0110/public_html/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/labels/0110/public_html/index.php(8): CApplication->run()
+#3 {main} REQUEST_URI=/labels/0110/public_html/notitie

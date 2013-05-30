@@ -86,8 +86,8 @@ return array(
 			'combineJs'=>!defined('LDEV') || !LDEV,
 			'combineCss'=>!defined('LDEV') || !LDEV,
 			'scriptMap'=>array(
-				'jquery.js'=>'/scripts/jquery/jquery.core.js',
-				'jquery.min.js'=>'/scripts/jquery/jquery.core.js',
+				'jquery.js'=>'http://localhost:8080/labels/0110/public_html/scripts/jquery/jquery.core.js',
+				'jquery.min.js'=>'http://localhost:8080/labels/0110/public_html/scripts/jquery/jquery.core.js',
 			)
 		),
 		'widgetFactory'=>array(
