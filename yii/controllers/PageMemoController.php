@@ -56,8 +56,8 @@ class PageMemoController extends Controller
 
 			if (!isset($_POST['comment']))
 				$_POST['comment']='';
-			
-			if (isset($_POST['respondent']) && $_POST['respondent'] != 'anoniem')
+
+			/*if (isset($_POST['respondent']) && $_POST['respondent'] != 'anoniem')
 			{
 				// prevent cheating
 				if (PageMemo::model()->countByAttributes(array('respondent'=>$_POST['respondent'], 'memoId'=>$_POST['memoId'], 'pageId'=>$_POST['pageId'])) > 0)
@@ -65,7 +65,7 @@ class PageMemoController extends Controller
 					echo CJSON::encode(array('result'=>-2));
 					Yii::app()->end();
 				}
-			}
+			}*/
 
 			$page=Page::model()->findByPk($_POST['pageId'], array('select'=>'id','with'=>'availableMemos','together'=>true));
 			if ($page===null)
@@ -140,7 +140,7 @@ class PageMemoController extends Controller
 			{
 				$model=$this->loadModel();
 			}
-			
+
 			$model->delete();
 
 			echo CJSON::encode(array('result'=>1,'memoId'=>$model->memoId));
